@@ -10,27 +10,24 @@ const Footer = () => {
               <p className="footer-description">Cred Wallet is your secure digital vault for managing , accessing and protecting all your credit</p>
             </div>
             <div className="contact-container">
-              <a href="https://www.facebook.com/ayush.aryan.90834/" className="contact-icon">
-                <img src="./twitter.jpg" alt="twitter-logo"/>
-              </a>
-              <a href="https://www.linkedin.com/in/ayush-aryan-8305861a2/" className="contact-icon">
+              <a href="https://www.linkedin.com/in/harshita-purwar-8232821b7/" className="contact-icon">
                 <img src="./linkedin.png" alt="linkedin-logo"/>
               </a>
-              <a href="https://github.com/aryanayush012" className="contact-icon">
+              <a href="https://github.com/harshita21-06" className="contact-icon">
                 <img src="./github.png" alt="github-logo"/>
               </a>
             </div>
             <div className="call-to-action">
-              <button type="button" className="call-button" onClick={() => window.location.href = "tel:+917808936924"}>
+              <button type="button" className="call-button" onClick={() => window.location.href = "tel:+917007852636"}>
                 Call Us
               </button>
-              <button type="button" className="email-button" onClick={() => window.location.href = "mailto:aryanayush012@gmail.com"}>
+              <button type="button" className="email-button" onClick={() => window.location.href = "mailto:harshitapurwar.rath@gmail.com"}>
                 Email
               </button>
             </div>
         </div>
               <p className="copyright">
-                All Rights Reserved ©️ Ayush Aryan
+                All Rights Reserved ©️ Harshita Purwar
               </p>
         </div>
   );

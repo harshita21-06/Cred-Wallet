@@ -20,15 +20,15 @@ const About = () => (
     </ul>
     <h2 className="about-section-title">About the Developer</h2>
     <p className="about-developer">
-      <strong>Ayush Aryan</strong> is a passionate full-stack developer with a
+      <strong>Harshita Purwar</strong> is a passionate full-stack developer with a
       strong foundation in data structures and algorithms. With extensive
-      experience in the MERN stack, Ayush is dedicated to building robust,
-      scalable, and user-friendly web solutions. He has solved over 500 coding
+      experience in the Frontend, Harshita is dedicated to building robust,
+      scalable, and user-friendly web solutions. She has solved over 500 coding
       problems on platforms like LeetCode and GFG, and is currently working at{" "}
       <strong>CarTrade Tech Ltd.</strong>
     </p>
     <p>
-      Ayush’s commitment to quality and innovation is reflected in every aspect
+      Harshita's commitment to quality and innovation is reflected in every aspect
       of Cred Wallet, ensuring users enjoy both convenience and security in
       their digital card management.
     </p>
