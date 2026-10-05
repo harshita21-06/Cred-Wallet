@@ -1,0 +1,58 @@
+.about-container {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 32px 28px;
+  background: rgba(0,0,0,50%);
+  border-radius: 18px;
+  box-shadow: 0 4px 32px 0 rgba(0,0,0,0.10);
+  font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.about-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 18px;
+  letter-spacing: 1px;
+}
+
+.about-intro {
+  font-size: 1.15rem;
+  color: #fff;
+  margin-bottom: 22px;
+  line-height: 1.7;
+}
+
+.about-section-title {
+  font-size: 1.3rem;
+  color: #fff;
+  margin-top: 28px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.about-features {
+  list-style: disc inside;
+  margin-bottom: 18px;
+  color: #fff;
+  padding-left: 18px;
+}
+
+.about-features li {
+  margin-bottom: 7px;
+  font-size: 1.08rem;
+}
+
+.about-footer {
+  margin-top: 32px;
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 500;
+  text-align: center;
+}
+.about-developer{
+      list-style: disc inside;
+  margin-bottom: 18px;
+  color: #fff;
+  padding-left: 18px;
+}

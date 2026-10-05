@@ -1,0 +1,119 @@
+
+/* AddCard modal and form styles */
+.addcard-container {
+  width: 80%;
+  height: fit-content;
+  position: relative;
+  top:50%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* background-color: rgb(0 0 0 / 50%); */
+  background-color: #141414;
+  border-radius: 20px;
+  box-shadow:  2px 2px 20px #3a3a3a;
+  backdrop-filter: blur(5px);
+  margin-top: 100px;
+  padding-bottom: 20px;
+}
+.addcard-inner {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.addcard-form{
+    display: flex;
+    flex-direction: column;
+}
+.addcard-title {
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 20px;
+  margin-bottom: 10px;
+}
+.addcard-card-preview {
+  margin-bottom: 10px;
+}
+.addcard-placeholder {
+  color: gray;
+}
+.addcard-option {
+  color: #000;
+}
+
+/* Ensure select and input fields look good on dark background */
+.addcard-modal select.form-name-input,
+.addcard-modal input.form-name-input {
+  background: transparent;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.addcard-modal select.form-name-input:focus,
+.addcard-modal input.form-name-input:focus {
+  outline: none;
+  border-color: #61dafb;
+}
+/* Remove default select arrow for consistency */
+.addcard-modal select.form-name-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.enabled-submit-button{
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #2f2f2f, #000000);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  letter-spacing: 0.8px;
+  margin: 20px 0;
+}
+.enabled-submit-button:hover {
+  background: linear-gradient(135deg, #444444, #1a1a1a);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+  scale: 1.02;
+}
+.enabled-submit-button:active {
+    transform: scale(0.97);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+}
+.disabled-submit-button{
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #da1414, #3e0e0e);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  letter-spacing: 0.8px;
+  margin: 20px 0;
+  margin-left: 20px;
+}
+.disabled-submit-button:hover {
+  background: linear-gradient(135deg, #da1414, #3e0e0e);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+  scale: 1.02;
+}
+.select-bank{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.select-bank-logo{
+  width: auto;
+  height: 32px;
+  margin-right: 8px;
+}

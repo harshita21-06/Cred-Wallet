@@ -1,0 +1,84 @@
+/* BankPopup modal styles */
+.bank-popup-modal {
+    min-width: 400px;
+    height: 450px;
+    background-color: rgb(0 0 0 / 50%);
+    border-radius: 20px;
+    box-shadow: inset 1px 1px 2px rgba(255, 255,255, 100%);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    
+}
+.bank-popup-title {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.bank-popup-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-height: 350px;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+.bank-popup-logo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 10px;
+}
+.bank-popup-logo-item:hover {
+  background: #333;
+  transform: scale(1.05);
+}
+.bank-popup-logo-img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin-bottom: 8px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+.bank-popup-logo-label {
+  color: #fff;
+  font-size: 13px;
+  text-align: center;
+  margin-top: 2px;
+  max-width: 90px;
+  word-break: break-word;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border-radius: 50%;
+  color: grey;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+  z-index: 2;
+}
+@media (max-width: 600px) {
+  .bank-popup-modal {
+    min-width: 90vw;
+    padding: 16px 4px;
+  }
+  .bank-popup-logo-img {
+    width: 40px;
+    height: 40px;
+  }
+  .bank-popup-logo-label {
+    font-size: 11px;
+    max-width: 60px;
+  }
+}

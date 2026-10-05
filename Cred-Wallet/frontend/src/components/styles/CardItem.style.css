@@ -1,0 +1,137 @@
+.card-item-container{
+    height: fit-content;
+    width: fit-content;
+    display: flex;
+    position: relative;
+    background-color: rgb(0 0 0 / 50%);
+    border-radius: 20px;
+    box-shadow:  -2px -2px 3px #3a3a3a;
+    backdrop-filter: blur(3px);
+    justify-content: center;
+    align-items: center;
+}
+.card-item{
+    background-color: #fff;
+    height: 182.872997856px;
+    width: 290px;
+    border-radius: 14px;
+    /* margin: 40px; */
+}
+.card-item-flip {
+      width: 320px;
+    height: 200px;
+    /* perspective: 1000px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-item.card-item-inner {
+  /* width: 100%;
+  height: 100%; */
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37);
+  /* position: absolute; */
+  transition: transform 0.6s linear, background 0.4s linear;
+  transform-style: preserve-3d;
+}
+.card-item-flip:hover .card-item.card-item-inner,
+.card-item-flip:focus .card-item.card-item-inner {
+  transform: rotateY(180deg);
+}
+.card-item-front, .card-item-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  box-sizing: border-box;
+  border-radius: 14px;
+}
+.card-item-front {
+  z-index: 2;
+  border-radius: 14px;
+}
+.card-item-back {
+  transform: rotateY(180deg);
+  background: #fff;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+/* .card-bank-logo {
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+  margin-right: 8px;
+} */
+.magnetic-stripe {
+  background-color: #2a1d16;
+  height: 22%;
+  left: 0;
+  position: absolute;
+  top: 9%;
+  width: 100%;
+}
+.card-stripe{
+  background: repeating-linear-gradient(0.1deg, #fff 20%, #fff 40%, #fea 40%, #fea 44%, #fff 44%);
+  height: 18%;
+  left: 5%;
+  position: absolute;
+  top: 35%;
+  width: 75%;
+}
+.card-type-img-back{
+  position: absolute;
+  background-position: bottom center;
+  bottom: 5%;
+  left: 50%;
+  opacity: 0.6;
+  right: auto;
+  top: auto;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  height: 23%;
+}
+.card-item-chip{
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9Ijc2IiB2aWV3Qm94PSIwIDAgMTAwIDc2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHByZXNlcnZlQXNwZWN0UmF0aW89InhNaWRZTWlkIj48ZGVmcz48bGluZWFyR3JhZGllbnQgeDE9IjEwMCUiIHkxPSIwJSIgeDI9IjAlIiB5Mj0iMTAwJSIgaWQ9ImEiPjxzdG9wIHN0b3AtY29sb3I9IiNGM0QwOEYiIG9mZnNldD0iMCUiLz48c3RvcCBzdG9wLWNvbG9yPSIjRkFENzY2IiBvZmZzZXQ9IjEwMCUiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cGF0aCBkPSJNOTIuNzI3IDc1LjQ1NWgtODUuNDU1Yy00IDAtNy4yNzMtMy4yNzMtNy4yNzMtNy4yNzN2LTYwLjkwOWMwLTQgMy4yNzMtNy4yNzMgNy4yNzMtNy4yNzNoODUuNDU1YzQgMCA3LjI3MyAzLjI3MyA3LjI3MyA3LjI3M3Y2MC45MDljMCA0LTMuMjczIDcuMjczLTcuMjczIDcuMjczIiBmaWxsPSJ1cmwoI2EpIi8+PHBhdGggZD0iTTcyLjEyMyAyOC40ODVoMjcuODc4di0xLjgxOGgtMjkuNjQ4Yy0uOTY1IDAtMS44MzIuNjAxLTIuMTcyIDEuNTA0LTIuMjg3IDYuMDcyLTIuNDMzIDEyLjU5NC0uNDM4IDE5Ljg0Mi40NTUgMS42NTQuNDM1IDMuNC0uMSA1LjAzLTIuMDM2IDYuMTk1LTcuNzc5IDE5Ljk4OC0xOC41NTEgMTkuOTg4LTExLjAwOCAwLTE2LjA5Ni0xNS42OTktMTcuMzM0LTIxLjk1Mi0uMTU1LS43ODQtLjEyMi0xLjU5Mi4xMDctMi4zNTcgMS42OTUtNS42NDggMi4wOTQtMTAuNjQtLjAxNi0xOS41OS0uMjA1LS44Ny0uMTgyLTEuNzgzLjA0OC0yLjY0NiA0LjQ4LTE2Ljc1NSAxMi44ODItMjAuMTQ3IDEyLjk2NS0yMC4xNzkuMzU2LS4xMzIuNTkzLS40NzIuNTkzLS44NTJ2LTUuNDU1aC0xLjgxOHYzLjc3NmMwIC42NS0uMzMyIDEuMjUyLS44ODQgMS41OTYtMi44MDMgMS43NDItOC45MDQgNi45MzYtMTIuNTU3IDIwLjQ1Ni0uMTguNjY4LS43ODEgMS4xMzYtMS40NzMgMS4xMzNsLTI4LjcyMi0uMTM5djEuODE4bDI3LjQxNi4xMzNjMS40NjguMDA3IDIuNzM1IDEuMDQxIDMuMDM3IDIuNDc4IDEuNDE2IDYuNzQxIDEuMjE5IDExLjAzOS4wODIgMTUuNDU4LS4zMTYgMS4yMy0xLjQyIDIuMDk2LTIuNjkgMi4xMDlsLTI3Ljg0NC4yN3YxLjgxOWwyOC42MDUtLjI3OGMuNjkzLS4wMDcgMS4yOTYuNDczIDEuNDM1IDEuMTUyIDEuNDQyIDcuMDQxIDYuODg3IDIzLjA3IDE5LjA1IDIzLjA3IDYuMzY4IDAgMTIuMDYyLTQuMjUgMTYuNDY3LTEyLjI5IDIuNjQ0LTQuODI4IDQuMDY3LTkuNTkxIDQuNTQxLTExLjM0NmgyOS45MDF2LTEuODE4aC0yOC4wMTZjLTEuMTU4IDAtMi4xODMtLjc3Mi0yLjQ4OS0xLjg4OS0xLjY5Mi02LjE2NC0xLjc2MS0xMS43NTUtLjItMTYuOTU5LjM3MS0xLjIzNSAxLjUzOC0yLjA2MSAyLjgyNy0yLjA2MXptLTE3LjE1LTIxLjkxNGMuMDQ1LjAyMiA0LjUxOSAyLjMyMiA5LjI1MyAxMC4wNDEuMTcyLjI4LjQ3LjQzNC43NzYuNDM0LjE5OCAwIC4zOTktLjA2NC41NzEtLjIwMi4zNjUtLjI5Mi40MTYtLjgzNy4xNzItMS4yMzUtMy41Ny01LjgwNS03LjAyNC04LjcxLTguNzc1LTkuOTMxLS40My0uMjk5LS42OC0uNzkyLS42OC0xLjMxNXYtNC4zNjNoLTEuODE4djUuNzU4YzAgLjM0NS4xOTUuNjU5LjUwMi44MTN6IiBmaWxsPSIjMEMwMjAwIi8+PC9zdmc+);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 26.3636363636px;
+    left: 10%;
+    position: absolute;
+    top: 10%;
+    width: 41.4285714286px;
+}
+.card-item-actions{
+    position: absolute;
+    bottom: -15px;
+    right: 40%;
+    display: flex;
+    gap: 20px;
+}
+.delete-card-icon{
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+   background-image: url('../../../public/trash.png');
+   margin-top: 3px;
+}
+.edit-card-icon{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+   background-image: url('../../../public/edit.png');
+}

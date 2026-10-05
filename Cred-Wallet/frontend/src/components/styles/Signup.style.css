@@ -1,0 +1,126 @@
+.signup-form{
+    width: 400px;
+    height: 450px;
+    background-color: rgb(0 0 0 / 50%);
+    border-radius: 20px;
+    box-shadow: inset 1px 1px 2px rgba(255, 255,255, 100%);
+    backdrop-filter: blur(5px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+.signup-form h1 {
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+}
+.signup-inner-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    gap: 0px;
+}
+
+.signup-name,
+.signup-email,
+.signup-password,
+.signup-confirm-password {
+    position: relative;
+    margin: 10px 0;
+    width: 250px;
+}
+
+.signup-name input,
+.signup-email input,
+.signup-password input,
+.signup-confirm-password input {
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+    font-size: 20px;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background: transparent;
+    color: #fff;
+}
+
+/* Force autocomplete background to black and text to white */
+.signup-name input:-webkit-autofill,
+.signup-email input:-webkit-autofill,
+.signup-password input:-webkit-autofill,
+.signup-confirm-password input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px #000 inset !important;
+  -webkit-text-fill-color: #fff !important;
+  box-shadow: 0 0 0 1000px #000 inset !important;
+  color: #fff !important;
+}
+
+.signup-name label,
+.signup-email label,
+.signup-password label,
+.signup-confirm-password label {
+    position: absolute;
+    left: 10px;
+    top: 13px;
+    color: gray;
+    padding: 0 4px;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+.signup-name input:focus + label,
+.signup-email input:focus + label,
+.signup-password input:focus + label,
+.signup-confirm-password input:focus + label,
+.signup-name input:not(:placeholder-shown) + label,
+.signup-email input:not(:placeholder-shown) + label,
+.signup-password input:not(:placeholder-shown) + label,
+.signup-confirm-password input:not(:placeholder-shown) + label {
+    position: absolute;
+    left: 10px;
+    top: -13px;
+    color: #fff;
+    background-color: rgb(0 0 0 / 50%);
+    padding: 0 4px;
+    pointer-events: none;
+    transition: 0.2s ease all;
+}
+
+.submit-button{
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #2f2f2f, #000000);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  letter-spacing: 0.8px;
+  margin-top: 20px;
+}
+.submit-button:hover {
+  background: linear-gradient(135deg, #444444, #1a1a1a);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+  scale: 1.02;
+}
+.submit-button:active {
+    transform: scale(0.97);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border-radius: 50%;
+  color: grey;
+  font-size: 14px;
+  cursor: pointer;
+}

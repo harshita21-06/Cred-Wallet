@@ -1,0 +1,121 @@
+.navbar{
+    display:flex;
+    background-color: rgb(0 0 0 / 50%);
+    height: 100px;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    border-radius:20px;
+    box-shadow: inset 0px -1px 1px rgba(255, 255,255, 100%);
+    backdrop-filter: blur(5px);
+    z-index: 3;
+}
+.navbar-brand{
+    width: 90px;
+    height: 60px;
+    margin:0 0 0 5%;
+    background-image: url('../../../public/logo.png');
+    background-position: center;
+    background-size: cover;
+    border: none;
+    padding: 5px;
+}
+.navbar-links{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 50%;
+    gap: 10%;
+}
+.navbar-links a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+}
+.login-btn,
+.signup-btn, .logout-btn{
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  background: linear-gradient(135deg, #2f2f2f, #000000);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  letter-spacing: 0.8px;
+  margin-top: 20px;
+}
+.login-btn:hover,
+.signup-btn:hover, .logout-btn:hover {
+  background: linear-gradient(135deg, #444444, #1a1a1a);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+  scale: 1.02;
+}
+.login-btn:active,
+.signup-btn:active, .logout-btn:active {
+    transform: scale(0.97);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.1);
+}
+.navbar-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 10;
+}
+.hamburger-bar {
+  width: 28px;
+  height: 3px;
+  background: #fff;
+  margin: 4px 0;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100vw;
+    background: rgb(0 0 0 / 95%);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0 20px 20px;
+    gap: 20px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    z-index: 100;
+  }
+  .navbar-links.open {
+    display: flex;
+  }
+  .navbar-hamburger {
+    display: flex;
+  }
+  .navbar-auth {
+    display: none;
+  }
+  .mobile-logout {
+    display: block;
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 769px) {
+  .mobile-logout {
+    display: none;
+  }
+}
